@@ -8,4 +8,6 @@ public class CharacterData : ScriptableObject
 	public WeaponData weaponData;
 	public float sightAngularSpeed = 12f;
 	public float movementSpeed = 6f;
+	public float footprintDuration = 10f;
+	public float footprintSoundAmount = 5f;
 }

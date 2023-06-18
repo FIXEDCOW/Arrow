@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: crossbow
   m_EditorClassIdentifier: 
   angularSpeed: 6
-  initRangeAngle: 4
-  finalRangeAngle: 4
+  initRangeAngle: 5
+  finalRangeAngle: 5
   initRangeSize: 1
   finalRangeSize: 1
   timeToAim: 0

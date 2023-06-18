@@ -2,6 +2,7 @@ using FunkyCode.Utilities;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Sirenix.OdinInspector;
 
 [RequireComponent(typeof(PlayerController))]
 public class PlayerInput : MonoBehaviour
@@ -23,6 +24,7 @@ public class PlayerInput : MonoBehaviour
 	{
 		InitializeSetting();
 	}
+	[Button]
 	private void InitializeSetting()
 	{
 		TryGetComponent(out playerController);

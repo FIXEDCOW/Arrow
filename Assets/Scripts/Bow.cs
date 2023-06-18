@@ -29,7 +29,7 @@ public class Bow : Weapon
 		if (cooldown)
 			return;
 		AddSlowMod();
-		animator.SetBool("mouseDown", true);
+		animator.SetBool("reload", true);
 		range.Aiming(data.initRangeAngle, data.finalRangeAngle, data.initRangeSize, data.finalRangeSize, data.timeToAim);
 	}
 	private void AddSlowMod()
@@ -49,7 +49,8 @@ public class Bow : Weapon
 		if (cooldown)
 			return;
 		RemoveSlowMod();
-		animator.SetBool("mouseDown", false);
+		animator.SetBool("reload", false);
+		animator.SetTrigger("fire");
 		float spread = range.Result();
 		shot.Fire(spread);
 		CoolDown(data.postDelay).Forget();

@@ -14,12 +14,13 @@ public abstract class Weapon : MonoBehaviour
 	[SerializeField] protected ShotModule shot;
 	[SerializeField] protected WeaponData data;
 
-	protected bool cooldown;
+	[SerializeField] protected bool cooldown;
 
 	protected virtual void Start()
 	{
 		TryGetComponent(out sr);
 		TryGetComponent(out animator);
+		range.InitValue(data.initRangeAngle, data.initRangeSize);
 	}
 	private void Update()
 	{
@@ -43,7 +44,7 @@ public abstract class Weapon : MonoBehaviour
 	public abstract void MouseDown();
 	public abstract void MouseUp();
 
-	protected async UniTask CoolDown(int milliseconds)
+	protected virtual async UniTask CoolDown(int milliseconds)
 	{
 		cooldown = true;
 		await UniTask.Delay(milliseconds);

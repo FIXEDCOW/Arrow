@@ -50,7 +50,7 @@ public abstract class Projectile : MonoBehaviour
 	}
 
 	public abstract void Stuck(Blocking target);
-	public abstract void Bounced(Blocking target);
+	public abstract void Bounced();
 	public virtual async UniTask DeactivateAfter(int milliseconds)
 	{
 		await UniTask.Delay(milliseconds, cancellationToken : cancellationTokenSource.Token);

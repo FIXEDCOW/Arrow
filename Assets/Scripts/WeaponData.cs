@@ -11,6 +11,5 @@ public class WeaponData : ScriptableObject
 	public int initRangeSize = 1;
 	public int finalRangeSize = 1;
 	public int timeToAim = 800;
-	public int preDelay = 100;
 	public int postDelay = 400;
 }
